@@ -4,6 +4,13 @@ nav a {
   font-weight: 500;
 }
 
+nav img {
+  width: auto;
+  height: 1.5rem;
+  background-color: $header;
+  background-image: none;
+}
+
 //queries etc//
 .is-hidden {
   display: none;
@@ -11,15 +18,20 @@ nav a {
 @media screen and (max-width: 768px) {
   #menu-toggle:checked + .nav-menu {
     display: block;
+    text-align: center;
   }
 }
 .nav-toggle {
   font-size: 3.25rem;
   align-items: center;
   display: flex;
-  padding-right: 0.75rem;
+  padding-right: 10%;
 }
-@media (min-width: 768px) {
+.nav-item:after {
+    content: '\A';
+    white-space: pre;
+}
+@media (min-width: 769px) {
   .nav-toggle {
     display: none;
   }
@@ -29,48 +41,52 @@ nav a {
 }
 .nav-item {
   align-items: center;
-  display: flex;
-  padding: 0.25rem 0.5rem;
+  padding: 0px 0.5rem;
 }
 .nav-left, .nav-right {
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  padding: 3rem 0px;
 }
 .nav-left {
   justify-content: flex-start;
+  visibility: hidden;
 }
 .nav-right {
   justify-content: center;
 }
 @media (max-width: 768px) {
-  .nav-menu.nav-right {
-    display: none;
-    left: 0;
-    right: 0;
-    top: 100%;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
-  }
-  .nav-menu.nav-right .nav-item {
-    border-top: 1px solid rgba(219, 219, 219, 0.5);
-    padding: 0.75rem;
-  }
+      .nav-menu.nav-right {
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
+      }
+      .nav-menu.nav-right .nav-item {
+        border-top: 1px solid rgba(219, 219, 219, 0.5);
+        padding: 0.75rem;
+      }
+
+      .nav a {
+      font-weight: 600;
+    }
+
 }
 .nav {
   display: flex;
   align-items: stretch;
-  background-image: linear-gradient(to bottom left, white, #ddd);
+  background-color: $header;
   min-height: 3.25rem;
   position: relative;
   
 }
 
-.nav a {
-  text-decoration: underline;
-}
+
 
 @media screen and (min-width: 769px) {
 
@@ -81,4 +97,6 @@ nav a {
 .nav .nav-left {
   display: none;
 }
+
+
 }
