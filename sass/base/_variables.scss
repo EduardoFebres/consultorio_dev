@@ -1,5 +1,14 @@
+//font//
 $font:    'Raleway', Helvetica, sans-serif;
-$primary: #000000;
-$secondary: #F9F871;
-$background: #fff;
-$header: #FFF6FC;
+//colors//
+$primary: black;
+$secondary: yellow;
+$background: white;
+$header: lavender;
+//screens brakepoints//
+$hasta-s: calc(38rem - 1px);
+$desde-m: 38em;
+$hasta-m: calc(48rem - 1px);
+$desde-ml: 48em;
+$hasta-ml: calc(64rem - 1px);
+$desde-l: 75rem;

@@ -237,7 +237,7 @@
   order: 1;
 }
 
-@media screen and (min-width: $desde-m) {
+@media (--sm-viewport) {
   .container {
     width: var(--container-sm, 46rem);
   }
@@ -432,7 +432,7 @@
   }
 }
 
-@media screen and (min-width: 64em) {
+@media (--md-viewport) {
   .container {
     width: var(--container-md, 61rem);
   }
@@ -627,7 +627,7 @@
   }
 }
 
-@media screen and (min-width: 75em) {
+@media (--lg-viewport) {
   .container {
     width: var(--container-lg, 71rem);
   }

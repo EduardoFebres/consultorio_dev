@@ -1,0 +1,64 @@
+//call to action//
+.c-t-action {
+    text-align: center;
+    padding: 3rem 0px 4rem
+}
+
+.caption {
+    padding: 0px 1rem;
+    font-weight: 400;
+    font-size: 1.8em;
+    padding: 2rem;
+}
+
+//secciones//
+.secciones section {
+	padding:1rem 1rem 3rem;
+}
+
+.secciones section .info {
+padding: 0rem 1rem 1rem;
+}
+
+.secciones {
+	align-content: flex-start;
+}
+
+.secciones p.accion {
+	font-weight: 600;text-transform: uppercase;font-size: 0.4
+}
+
+
+
+
+//footer//
+button.suscribirse-footer {
+	margin:1rem;
+}
+
+@media screen and (min-width: $desde-m) {
+.blog section {
+	border:none !important;
+	padding-top:6rem !important;
+	padding-bottom: 14rem !important;
+}
+
+.blog {
+	align-content: flex-end;
+	flex-direction: row-reverse !important;
+}
+
+section:nth-child(2) {
+	border-width: 0px 0px 1px 1px !important;
+}
+.secciones section {
+	border:solid;
+	border-color: lightgrey;
+	border-width: 0px 0px 1px
+}
+section.bottom {
+	border-bottom: none;
+}
+
+}
+

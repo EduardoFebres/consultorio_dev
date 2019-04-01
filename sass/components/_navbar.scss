@@ -6,16 +6,28 @@ nav a {
 
 nav img {
   width: auto;
-  height: 1.5rem;
-  background-color: $header;
+  height: 1.3rem;
   background-image: none;
+  padding: 1rem 0px;
 }
 
 //queries etc//
 .is-hidden {
-  display: none;
+    display: none;
 }
-@media screen and (max-width: 768px) {
+
+nav i,.nav-right.nav-menu i {
+  font-size: 1.5rem
+}
+
+nav i {
+  fill:$primary;
+}
+
+.nav-right.nav-menu i {
+  color:$background;
+}
+@media screen and (max-width: $hasta-m) {
   #menu-toggle:checked + .nav-menu {
     display: block;
     text-align: center;
@@ -25,13 +37,13 @@ nav img {
   font-size: 3.25rem;
   align-items: center;
   display: flex;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 .nav-item:after {
     content: '\A';
     white-space: pre;
 }
-@media (min-width: 769px) {
+@media (min-width: $desde-ml) {
   .nav-toggle {
     display: none;
   }
@@ -41,7 +53,7 @@ nav img {
 }
 .nav-item {
   align-items: center;
-  padding: 0px 0.5rem;
+  padding: 0.3rem 0.5rem;
 }
 .nav-left, .nav-right {
   align-items: stretch;
@@ -54,6 +66,12 @@ nav img {
   justify-content: flex-start;
   visibility: hidden;
 }
+
+.nav-left a {
+  font-size: 1rem;
+  padding: 0px;
+}
+
 .nav-right {
   justify-content: center;
 }
@@ -62,19 +80,29 @@ nav img {
         display: none;
         left: 0;
         right: 0;
-        top: 100%;
         position: absolute;
-        background-color: white;
+        background-color: $primary;
         box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
+        padding-top:7.3rem;
+        padding-bottom: 2.5rem;
+        transition-property: all;
       }
       .nav-menu.nav-right .nav-item {
-        border-top: 1px solid rgba(219, 219, 219, 0.5);
         padding: 0.75rem;
       }
 
       .nav a {
       font-weight: 600;
+      font-size: 1.3rem;
+      color: $background;
+
     }
+
+      .nav-right {
+        padding-top: 0px;
+        padding-bottom:1rem;
+        line-height: 3.5rem;
+      }
 
 }
 .nav {
@@ -92,6 +120,9 @@ nav img {
 
 .nav a {
   text-decoration: none;
+  font-size: 0.7rem;
+  color:$primary;
+
 }
 
 .nav .nav-left {
