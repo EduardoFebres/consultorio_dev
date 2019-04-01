@@ -40,7 +40,7 @@ nav i {
   padding-right: 5%;
 }
 .nav-item:after {
-    content: '\A';
+    content: '\a';
     white-space: pre;
 }
 @media (min-width: $desde-ml) {

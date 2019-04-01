@@ -1,0 +1,185 @@
+body {
+  background: #f1f1f1;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 809px){
+  /* The device with borders */
+.device {
+  position: relative;
+  width: 360px;
+  height: 50vh;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 0px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.device:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.device:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.device .content {
+  width: 360px;
+  height: 640px;
+  background: white;
+}
+}
+
+@media screen and (min-width:810px) and (max-width: 1335px) {
+/* The device with borders */
+.device {
+  position: relative;
+  width: 768px;
+  height: 50vh;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 0px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.device:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.device:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.device .content {
+  width: 768px;
+  height: 1024px;
+  background: white;
+  margin: -1px;
+}
+}
+
+@media screen and (min-width: 1336px) {
+
+body {
+  background: #f1f1f1;
+}
+
+/* The laptop with borders */
+.device {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  left: 50%;
+  position: absolute;
+  width: 1366px;
+  height: 800px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: black;
+  border-width: 24px 24px 80px;
+  background-color: black;
+
+}
+
+/* The keyboard of the laptop */
+.device:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1600px !important;
+  height: 60px;
+  margin: 80px 0 0 -110px;
+  background: black;
+  border-radius: 6px;
+}
+
+/* The top of the keyboard */
+.device:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  bottom: -110px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  background: #f1f1f1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 1;
+}
+
+/* The screen (or content) of the device */
+.device .content {
+  width: 1366px;
+  height: 800px !important;
+  overflow: hidden;
+  border: none;
+}
+}
+
+/*adaptación para banner*/
+.device {
+  border-bottom-left-radius: 0px; 
+  border-bottom-right-radius: 0px;
+
+}
+
+.device:before {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.device:after {
+  width: 0px;
+}
+
+.device .content {
+  width: 0px;
+}

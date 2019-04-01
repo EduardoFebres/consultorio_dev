@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css" media="screen">
+		.flex-nav div {
+			padding: 2rem 1rem;
+		}
+
+		.is-hidden {
+			display: none;
+		}
+
+		.flex-nav .menu-button {
+			padding: 0rem;
+		}
+
+		nav {
+			background-color: lightgrey;
+			position: fixed;
+			top:0;
+			left:0;
+			width: 100%;
+			transition: all;
+			height: inherit;
+		}
+		#menu-toggle:checked + .flex-nav {
+			display: block;
+			padding-top: 5rem;
+			padding-bottom: 3rem
+
+		}
+			#menu-toggle:checked + .flex-nav div {
+			flex-basis: 100%;
+			text-align: center;
+			padding:1rem;
+
+		}
+
+			#menu-toggle:checked + .flex-nav .menu-button {
+			flex-basis: 100%;
+			text-align: center;
+			padding:0rem;
+
+		}
+	</style>
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+	<input type="checkbox" id="menu-toggle" class="is-hidden" />
+	<div class="flex-nav" style="display: flex;justify-content: center;flex-wrap: wrap;">
+        <div><a href="">UNO</a></div>
+        <div><a href="">DOS</a></div>
+        <div><a href="">TRES</a></div>
+        <div><a href="">CUATRO</a></div>
+        <div class="menu-button" style="position:absolute; right:2rem;top:2rem;">
+        	<label for="menu-toggle" class="nav-toggle"> 
+			<i class="fa fa-bars" aria-hidden="true"></i>
+	   	 	</label>
+	    	
+	    </div>
+	</div>
+	
+</nav>
+</body>
+</html>
