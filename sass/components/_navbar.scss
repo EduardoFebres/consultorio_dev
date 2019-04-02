@@ -1,133 +1,100 @@
-// nav style //
-nav a {
-  text-transform: uppercase;
-  font-weight: 500;
+.flex-nav div {
+    padding: 2rem 1rem;
 }
 
-nav img {
-  width: auto;
-  height: 1.3rem;
-  background-image: none;
-  padding: 1rem 0px;
-}
-
-//queries etc//
 .is-hidden {
     display: none;
 }
 
-nav i,.nav-right.nav-menu i {
-  font-size: 1.5rem
+.flex-nav .menu-button {
+    padding: 0rem;
 }
 
-nav i {
-  fill:$primary;
+nav {
+    background-color: $header;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all;
+    height: inherit;
+    z-index: 100;
 }
 
-.nav-right.nav-menu i {
-  color:$background;
+header {
+  margin-top: 5rem;
 }
-@media screen and (max-width: $hasta-m) {
-  #menu-toggle:checked + .nav-menu {
-    display: block;
-    text-align: center;
-  }
+
+.flex-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.nav-toggle {
-  font-size: 3.25rem;
-  align-items: center;
-  display: flex;
-  padding-right: 5%;
-}
-.nav-item:after {
-    content: '\a';
-    white-space: pre;
-}
-@media (min-width: $desde-ml) {
-  .nav-toggle {
+
+.flex-nav div {
     display: none;
-  }
-}
-.nav-toggle:hover {
-  cursor: pointer;
-}
-.nav-item {
-  align-items: center;
-  padding: 0.3rem 0.5rem;
-}
-.nav-left, .nav-right {
-  align-items: stretch;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  padding: 3rem 0px;
-}
-.nav-left {
-  justify-content: flex-start;
-  visibility: hidden;
 }
 
-.nav-left a {
-  font-size: 1rem;
-  padding: 0px;
+.flex-nav div:first-child {
+    display: flex;
+    visibility: hidden;
 }
 
-.nav-right {
-  justify-content: center;
+.flex-nav div.menu-button {
+    display: block;
 }
-@media (max-width: 768px) {
-      .nav-menu.nav-right {
+
+//menu toggle//
+
+@media screen and (max-width: $hasta-ml) {
+
+#menu-toggle:checked+.flex-nav {
+    display: block;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: $primary;
+}
+
+#menu-toggle:checked+.flex-nav div {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+
+
+#menu-toggle:checked+.flex-nav div {
+    display: block;
+    visibility: visible;
+    color:$background;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#menu-toggle:checked+.flex-nav .menu-button {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 0rem;
+
+}
+
+#menu-toggle:checked+div .nav-toggle {
+    content: url(../img/close-menu.svg);
+}
+
+.nav-toggle::after {
+    content: url(../img/open-menu.svg);
+}
+}
+
+@media screen and (min-width: $desde-l) {
+    .nav-toggle {
         display: none;
-        left: 0;
-        right: 0;
-        position: absolute;
-        background-color: $primary;
-        box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
-        padding-top:7.3rem;
-        padding-bottom: 2.5rem;
-        transition-property: all;
-      }
-      .nav-menu.nav-right .nav-item {
-        padding: 0.75rem;
-      }
-
-      .nav a {
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: $background;
-
     }
 
-      .nav-right {
-        padding-top: 0px;
-        padding-bottom:1rem;
-        line-height: 3.5rem;
-      }
-
-}
-.nav {
-  display: flex;
-  align-items: stretch;
-  background-color: $header;
-  min-height: 3.25rem;
-  position: relative;
-  
-}
-
-
-
-@media screen and (min-width: 769px) {
-
-.nav a {
-  text-decoration: none;
-  font-size: 0.7rem;
-  color:$primary;
-
-}
-
-.nav .nav-left {
-  display: none;
-}
-
-
+    .flex-nav div {
+        display: flex !important;
+        visibility: visible !important;
+    }
 }
