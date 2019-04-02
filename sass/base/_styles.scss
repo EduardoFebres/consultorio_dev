@@ -1,3 +1,8 @@
+//header//
+img.header {
+	height: 50vh;
+}
+
 //call to action//
 .c-t-action {
     text-align: center;
@@ -62,3 +67,11 @@ section.bottom {
 
 }
 
+
+
+
+@media screen and (min-width: $desde-l) {
+	img.header {
+		height: 55vh;
+	}
+}
